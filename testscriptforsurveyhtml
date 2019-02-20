@@ -1,0 +1,53 @@
+// let validEntry;
+          // if($("#name").val().trim() === ''){
+          //   alert("Play enter a name");
+          // } else if($("#photo").val().trim() === ""){
+          //   alert("Please link a photo");
+          // } else{
+
+            // let answerArray = [];
+            // for(i = 1; i < 11; i++){
+            //   answerArray.push(parseInt($("#q" + i).val().substring(0,1)));
+            // }
+            // let newFriend = 
+            // {
+            //   name: $("#name").val().trim(),
+            //   photo: $("#photo").val().trim(),
+            //   scores: answerArray
+            // };
+            // let currentURL = window.location.origin;
+
+            // $.post( "/app/data/friends", newFriend, function(data){});
+
+            // $.ajax({url: "/app/data/friends", method: "GET"}).done(function(res){
+
+              // let bestFriend;
+              // let currentBest = 100;
+              // let differentArray = [];
+
+              // for(i = 0; i < res.lenght - 1; i++){
+              //   for(j = 0; j < 10; j ++){
+              //     let currentDiffernce = newFriend.score[j] - res[i].scores[j];
+              //     differentArray.push(Math.abs(currentDifference));
+              //   }
+
+              //   let difference = differenceArray.reduce(add, 0);
+
+              //   if(difference < currentBest){
+              //     bestFriend = res[i];
+              //     currentBest = difference;
+              //     differenceArray = [];
+              //   }else{
+              //     differenceArray = [];
+              //   }
+
+              //   let friendName = "<h4>" + bestFriend.name + "</h4>";
+              //   let friendphoto = "<img width='300px' src= " + bestFriend.photo + ">";
+
+              //   $("#friend-modal").modal("show");
+              //   $("#friend-modal h4").html(friendName);
+              //   $(".modal-body").html(friendphoto);
+
+              //   $("#survey")[0].reset();
+          //     }
+            // });
