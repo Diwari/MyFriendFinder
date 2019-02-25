@@ -1,7 +1,7 @@
 let friends = [
   {
     name: "Claudia Black",
-    photo: "",
+    photo: "https://www.thefamouspeople.com/profiles/images/claudia-black-1.jpg",
     scores: [
       5,1,2,3,4,
       4,1,2,3,2,
@@ -9,8 +9,8 @@ let friends = [
 
   },
   {
-    name: "Jamie Fox",
-    photo: "",
+    name: "Jamie Foxx",
+    photo: "img.jpg",
     scores: [
       1,2,3,4,5
       ,5,4,3,2,1
@@ -18,7 +18,7 @@ let friends = [
   },
   {
     name: "Bill Nye",
-    photo: "",
+    photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Bill_Nye_2017.jpg/220px-Bill_Nye_2017.jpg",
     scores: [
       3,2,1,4,1,
       5,2,3,1,4

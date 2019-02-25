@@ -21,24 +21,33 @@ module.exports = function(app){
     userPhoto = req.body.photo;
     userScores = req.body.scores;
 
-    totalDifference = 0;
-
+    let totalDifference;
+    
     for(let i = 0; i < friends.length; i++){
-        console.log(friends[i].name);
+        // console.log(friends[i].name);
+        // console.log(friends[i].photo);
+        // console.log(friends[i].scores);
         totalDifference = 0;
-        for(var j = 0; j < 10; j++){
-          totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+        let currentFriend = friends[i];
 
-          if (totalDifference <= bestMatch.friendDifference){
-            bestMatch.name = friends[1].name;
+        for(var j = 0; j < currentFriend.scores.length ; j++){
+          let currentFriendScore = currentFriend.scores[j];
+          let currentUserScores = userScores[j];
+
+        
+          totalDifference += Math.abs(parseInt(currentUserScores) - parseInt(currentFriendScore));
+
+          if (totalDifference <= bestMatch.difference){
+            bestMatch.name = friends[i].name;
             bestMatch.photo = friends[i].photo;
-            bestMatch.friendsDifference = totalDifference;
-
-            console.log(totalDifference);
-            console.log(bestMatch.friendDifference);
+            bestMatch.difference = totalDifference;
           }
         }
-    }
+
+         
+        console.log(totalDifference);
+        console.log(bestMatch.difference);
+    }console.log(bestMatch);
       friends.push(req.body);
 
       res.json(bestMatch);
