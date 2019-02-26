@@ -311,7 +311,7 @@
                             </p> 
                           </div>
                         </footer>
-                        <div id = "results-modal" class = "modal fade" id="friend-modal" role = "dialog">
+                        <div id = "results-modal" class = "modal fade" role = "dialog">
                           <div class = "modal-content">
                             <div class = "modal-header">
                               <button type = "button" class = "close" data-dismiss = "modal">x</button>
@@ -321,7 +321,7 @@
                             </div>
                             <div class = "modal-body">
                               <h2 id = "match-name"></h2>
-                              <img id="match-img" src="" alt="">
+                              <img id="match-photo" src="" alt="">
   
                             </div>
                             <div class = "modal-footer">
@@ -373,16 +373,17 @@
             };
               console.log(userData.name);
             $.post("/app/data/friends", userData, function(data){
+              console.log(data);
               $("#match-name").text(data.name);
               $("#match-photo").attr("src", data.photo);
 
-              $("results-modal").modal("toggle");
+              $("#results-modal").modal("toggle");
             });
 
           }else{
             alert("Please fill out all fields before submitting!");
           }
-
+          
         });
       </script>
 </body>

@@ -17,9 +17,9 @@ module.exports = function(app){
 
     };
     console.log(req.body);
-    userName = req.body.name;
-    userPhoto = req.body.photo;
-    userScores = req.body.scores;
+    let userInput = req.body;
+  
+    userScores = userInput.scores;
 
     let totalDifference;
     
@@ -36,10 +36,10 @@ module.exports = function(app){
 
         
           totalDifference += Math.abs(parseInt(currentUserScores) - parseInt(currentFriendScore));
-
+        }
           if (totalDifference <= bestMatch.difference){
-            bestMatch.name = friends[i].name;
-            bestMatch.photo = friends[i].photo;
+            bestMatch.name = currentFriend.name;
+            bestMatch.photo = currentFriend.photo;
             bestMatch.difference = totalDifference;
           }
         }
@@ -47,8 +47,8 @@ module.exports = function(app){
          
         console.log(totalDifference);
         console.log(bestMatch.difference);
-    }console.log(bestMatch);
-      friends.push(req.body);
+        console.log(bestMatch);
+        friends.push(userInput);
 
       res.json(bestMatch);
     //get array from friends.js 
